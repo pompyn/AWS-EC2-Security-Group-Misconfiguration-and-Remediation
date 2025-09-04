@@ -16,8 +16,8 @@ Source: Anywhere (0.0.0.0/0)
 Impact: This allows any IP address in the world to attempt to log in, leaving the instance vulnerable to brute force or unauthorized access attempts.
 
 📸 Screenshot – Before (Vulnerable State)
-(insert your “0.0.0.0/0 with warning banner” screenshot here)
-
+## ⚠️ Vulnerable Configuration (Before)
+![Vulnerable Security Group](images/before-sg.png)
 🔐 Secure Configuration (After)
 
 The security group was remediated by editing the inbound rule to:
@@ -29,8 +29,7 @@ Source: My IP (x.x.x.x/32)
 Impact: Now only the trusted admin IP can attempt to connect. All other access attempts are blocked.
 
 📸 Screenshot – After (Remediated State)
-(insert your “My IP (/32) saved, no warning” screenshot here)
-
+![Remediated Security Group](images/after-sg.png)
 ✅ Lessons Learned
 
 0.0.0.0/0 = open to the world and should be avoided except in rare, temporary testing situations.
